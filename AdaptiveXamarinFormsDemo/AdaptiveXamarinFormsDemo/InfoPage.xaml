@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<adaptiveXamarinForms:AdaptiveContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:adaptiveXamarinForms="clr-namespace:AdaptiveXamarinForms;assembly=AdaptiveXamarinForms"
+             x:Class="AdaptiveXamarinFormsDemo.InfoPage">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <Label Grid.Row="0" Grid.Column="0" Text="Device Idiom" />
+            <Label Grid.Row="0" Grid.Column="1" x:Name="IdiomLabel" />
+
+            <Label Grid.Row="1" Grid.Column="0" Text="App Width" />
+            <Label Grid.Row="1" Grid.Column="1" x:Name="WidthLabel" Text="{Binding Width}" />
+
+            <Label Grid.Row="2" Grid.Column="0" Text="App Height" />
+            <Label Grid.Row="2" Grid.Column="1" x:Name="HeightLabel" Text="{Binding Height}" />
+
+            <Label Grid.Row="3" Grid.Column="0" Text="App Orientation" />
+            <Label Grid.Row="3" Grid.Column="1" Text="{Binding Orientation}" />
+        </Grid>
+    </ContentPage.Content>
+</adaptiveXamarinForms:AdaptiveContentPage>

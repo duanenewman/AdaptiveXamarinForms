@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:AdaptiveXamarinFormsDemo"
+             x:Class="AdaptiveXamarinFormsDemo.PhoneMainPage">
+
+    <StackLayout>
+        <Label Text="Layout Demo"><Label.GestureRecognizers><TapGestureRecognizer Tapped="LayoutDemo1_OnTapped"></TapGestureRecognizer></Label.GestureRecognizers></Label>
+        <Label Text="Information"><Label.GestureRecognizers><TapGestureRecognizer Tapped="ViewInfoPage_OnTapped"></TapGestureRecognizer></Label.GestureRecognizers></Label>
+    </StackLayout>
+
+</ContentPage>

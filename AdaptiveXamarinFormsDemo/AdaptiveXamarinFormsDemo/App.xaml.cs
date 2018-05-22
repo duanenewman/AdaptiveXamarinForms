@@ -13,10 +13,23 @@ namespace AdaptiveXamarinFormsDemo
 		{
 			InitializeComponent();
 
-			MainPage = new AdaptiveXamarinFormsDemo.MainPage();
+		    MainPage = new NavigationPage(GetIdiomMainPage());
 		}
 
-		protected override void OnStart ()
+        public Page GetIdiomMainPage()
+        {
+            switch (Device.Idiom)
+            {
+                case TargetIdiom.Desktop:
+                    return new PhoneMainPage();
+                case TargetIdiom.Tablet:
+                    return new PhoneMainPage();
+                default: //TargetIdiom.Phone/Tv/Etc
+                    return new PhoneMainPage();
+            }
+        }
+
+        protected override void OnStart ()
 		{
 			// Handle when your app starts
 		}
@@ -30,5 +43,5 @@ namespace AdaptiveXamarinFormsDemo
 		{
 			// Handle when your app resumes
 		}
-	}
+    }
 }
