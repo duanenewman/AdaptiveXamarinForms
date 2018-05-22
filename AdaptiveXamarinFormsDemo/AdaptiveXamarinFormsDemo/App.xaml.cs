@@ -21,7 +21,7 @@ namespace AdaptiveXamarinFormsDemo
             switch (Device.Idiom)
             {
                 case TargetIdiom.Desktop:
-                    return new PhoneMainPage();
+                    return new DesktopMainPage();
                 case TargetIdiom.Tablet:
                     return new PhoneMainPage();
                 default: //TargetIdiom.Phone/Tv/Etc

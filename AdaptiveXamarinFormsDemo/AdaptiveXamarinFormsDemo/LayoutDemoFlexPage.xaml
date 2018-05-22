@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:AdaptiveXamarinFormsDemo"
+             x:Class="AdaptiveXamarinFormsDemo.LayoutDemoFlexPage" Title="Flex Layout Demo">
+    <ContentPage.Resources>
+        <StyleSheet>
+            <![CDATA[
+
+            .flexitem {
+                padding: 0;
+                margin: 5;
+            }
+
+            ]]>
+        </StyleSheet>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <FlexLayout Padding="10"
+            Direction="Row" 
+            Wrap="Wrap"
+            JustifyContent="SpaceEvenly">
+
+            <local:FlexContentView StyleClass="flexitem" />
+            <local:FlexContentView StyleClass="flexitem" />
+            <local:FlexContentView StyleClass="flexitem" />
+            <local:FlexContentView StyleClass="flexitem" />
+            <local:FlexContentView StyleClass="flexitem" />
+            <local:FlexContentView StyleClass="flexitem" />
+            <local:FlexContentView StyleClass="flexitem" />
+            <local:FlexContentView StyleClass="flexitem" />
+            <local:FlexContentView StyleClass="flexitem" />
+            <local:FlexContentView StyleClass="flexitem" />
+            <local:FlexContentView StyleClass="flexitem" />
+            <local:FlexContentView StyleClass="flexitem" />
+            <local:FlexContentView StyleClass="flexitem" />
+            <local:FlexContentView StyleClass="flexitem" />
+            <local:FlexContentView StyleClass="flexitem" />
+            <local:FlexContentView StyleClass="flexitem" />
+            <local:FlexContentView StyleClass="flexitem" />
+            <local:FlexContentView StyleClass="flexitem" />
+            <local:FlexContentView StyleClass="flexitem" />
+        </FlexLayout>
+    </ContentPage.Content>
+</ContentPage>

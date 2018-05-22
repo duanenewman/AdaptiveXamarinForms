@@ -5,6 +5,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <EmbeddedResource Remove="Page.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Xamarin.Forms" Version="3.0.0.482510" />
   </ItemGroup>
 
@@ -16,20 +20,66 @@
     <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="App.xaml.cs">
       <DependentUpon>*.xaml</DependentUpon>
     </Compile>
+    <Compile Update="LayoutDemoGridPage.xaml.cs">
+      <DependentUpon>LayoutDemoGridPage.xaml</DependentUpon>
+    </Compile>
     <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="PhoneMainPage.xaml.cs">
       <DependentUpon>PhoneMainPage.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Update="ContentView1.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="ContentView2.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="ContentView3.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="DesktopMainPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="FlexContentView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="GridContentViewPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="InfoPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="LayoutDemo1Page.xaml">
+    <EmbeddedResource Update="LayoutDemoFlexPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="LayoutDemoGridPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="ScrollingContentViewPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="TabbedContentPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="VisualStateManagerBuiltInDemoPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="VisualStateManagerDemoPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Update="VisualStateManagerOrientationDemoPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PropertyPageSchema Remove="Page.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Include="Page.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
 </Project>

@@ -1,12 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+<local:MainPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:AdaptiveXamarinFormsDemo"
              x:Class="AdaptiveXamarinFormsDemo.PhoneMainPage">
 
     <StackLayout>
-        <Label Text="Layout Demo"><Label.GestureRecognizers><TapGestureRecognizer Tapped="LayoutDemo1_OnTapped"></TapGestureRecognizer></Label.GestureRecognizers></Label>
+        <Label Text="Grid Layout Demo"><Label.GestureRecognizers><TapGestureRecognizer Tapped="LayoutDemoGrid_OnTapped"></TapGestureRecognizer></Label.GestureRecognizers></Label>
+        <Label Text="Flex Layout Demo"><Label.GestureRecognizers><TapGestureRecognizer Tapped="LayoutDemoFlex_OnTapped"></TapGestureRecognizer></Label.GestureRecognizers></Label>
+
+        <Label Text="VSM (Builtin)"><Label.GestureRecognizers><TapGestureRecognizer Tapped="LayoutVsmBuiltIn_OnTapped"></TapGestureRecognizer></Label.GestureRecognizers></Label>
+        <Label Text="VSM (Orientation)"><Label.GestureRecognizers><TapGestureRecognizer Tapped="LayoutVsmOrientation_OnTapped"></TapGestureRecognizer></Label.GestureRecognizers></Label>
+
+        <Label Text="Tabbed Content Views Demo"><Label.GestureRecognizers><TapGestureRecognizer Tapped="TabbedPage_OnTapped"></TapGestureRecognizer></Label.GestureRecognizers></Label>
+        <Label Text="Scrolling Content Views Demo"><Label.GestureRecognizers><TapGestureRecognizer Tapped="ScrollingPage_OnTapped"></TapGestureRecognizer></Label.GestureRecognizers></Label>
+        <Label Text="Grid Content View Demo"><Label.GestureRecognizers><TapGestureRecognizer Tapped="GridPage_OnTapped"></TapGestureRecognizer></Label.GestureRecognizers></Label>
+
         <Label Text="Information"><Label.GestureRecognizers><TapGestureRecognizer Tapped="ViewInfoPage_OnTapped"></TapGestureRecognizer></Label.GestureRecognizers></Label>
     </StackLayout>
 
-</ContentPage>
+</local:MainPage>

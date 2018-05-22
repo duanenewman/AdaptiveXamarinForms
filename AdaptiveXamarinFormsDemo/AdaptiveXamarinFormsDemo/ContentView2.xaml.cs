@@ -1,5 +1,4 @@
-﻿using AdaptiveXamarinForms;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,9 +10,9 @@ using Xamarin.Forms.Xaml;
 namespace AdaptiveXamarinFormsDemo
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class LayoutDemo1Page : AdaptiveContentPage
-    {
-		public LayoutDemo1Page ()
+	public partial class ContentView2 : ContentView
+	{
+		public ContentView2 ()
 		{
 			InitializeComponent ();
 		}

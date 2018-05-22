@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AdaptiveXamarinFormsDemo.VisualStateManagerOrientationDemoPage">
+    <ContentPage.Resources>
+        <Style TargetType="FlexLayout">
+            <Setter Property="VisualStateManager.VisualStateGroups">
+                <VisualStateGroupList x:Name="CommonStates">
+                    <VisualStateGroup>
+                        <VisualState x:Name="Portrait">
+                            <VisualState.Setters>
+                                <Setter Property="Direction" Value="Column"/>
+                                <Setter Property="Margin">
+                                    <OnPlatform x:TypeArguments="Thickness" Default="0">
+                                        <On Platform="iOS" Value="0,30"/>
+                                    </OnPlatform>
+                                </Setter>
+                            </VisualState.Setters>
+                        </VisualState>
+                        <VisualState x:Name="Horizontal">
+                            <VisualState.Setters>
+                                <Setter Property="Direction" Value="Row"/>
+                                <Setter Property="Margin">
+                                    <OnPlatform x:TypeArguments="Thickness" Default="0">
+                                        <On Platform="iOS" Value="30,0"/>
+                                    </OnPlatform>
+                                </Setter>
+                            </VisualState.Setters>
+                        </VisualState>
+                    </VisualStateGroup>
+                </VisualStateGroupList>
+            </Setter>
+        </Style>
+        <Style TargetType="Button">
+            <Setter Property="VisualStateManager.VisualStateGroups">
+                <VisualStateGroupList x:Name="CommonStates">
+                    <VisualStateGroup>
+                        <VisualState x:Name="Portrait">
+                            <VisualState.Setters>
+                                <Setter Property="AbsoluteLayout.LayoutBounds" 
+                                    Value="30, 0.5, 40, 40"/>
+                                <Setter Property="AbsoluteLayout.LayoutFlags" 
+                                    Value="YProportional"/>
+                            </VisualState.Setters>
+                        </VisualState>
+                        <VisualState x:Name="Horizontal">
+                            <VisualState.Setters>
+                                <Setter Property="AbsoluteLayout.LayoutBounds" 
+                                    Value="0.5, 0.9, 40, 40"/>
+                                <Setter Property="AbsoluteLayout.LayoutFlags" 
+                                    Value="PositionProportional"/>
+                            </VisualState.Setters>
+                        </VisualState>
+                    </VisualStateGroup>
+                </VisualStateGroupList>
+            </Setter>
+        </Style>
+    </ContentPage.Resources>
+    
+    <ContentPage.Content>
+        <FlexLayout>
+            <BoxView BackgroundColor="Aqua" />
+            <Button Text="1"/>
+            <Button Text="2"/>
+        </FlexLayout>
+    </ContentPage.Content>
+</ContentPage>

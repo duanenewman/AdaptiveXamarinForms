@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<local:MainPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:AdaptiveXamarinFormsDemo"
+             x:Class="AdaptiveXamarinFormsDemo.DesktopMainPage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Button" x:Key="MenuButtonStyle">
+                <Setter Property="HeightRequest" Value="100" />
+                <Setter Property="CornerRadius" Value="10" />
+                <Setter Property="BorderColor" Value="Black" />
+
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <FlexLayout
+            Direction="Row"
+            Wrap="Wrap"
+            JustifyContent="SpaceEvenly"
+            AlignItems="Center"
+            AlignContent="SpaceEvenly">
+
+            <Button Text="Grid Layout Demo" Clicked="LayoutDemoGrid_OnTapped" Style="{StaticResource MenuButtonStyle}"/>
+            <Button Text="Flex Layout Demo" Clicked="LayoutDemoFlex_OnTapped" Style="{StaticResource MenuButtonStyle}"/>
+            <Button Text="VSM (Builtin)" Clicked="LayoutVsmBuiltIn_OnTapped" Style="{StaticResource MenuButtonStyle}"/>
+            <!--<Button Text="VSM (Orientation)" Clicked="LayoutVsmOrientation_OnTapped" Style="{StaticResource MenuButtonStyle}"/>-->
+            <Button Text="Tabbed Content Views Demo" Clicked="TabbedPage_OnTapped" Style="{StaticResource MenuButtonStyle}"/>
+            <Button Text="Scrolling Content Views Demo" Clicked="ScrollingPage_OnTapped" Style="{StaticResource MenuButtonStyle}"/>
+            <Button Text="Grid Content View Demo" Clicked="GridPage_OnTapped" Style="{StaticResource MenuButtonStyle}"/>
+
+            <Button Text="Information" Clicked="ViewInfoPage_OnTapped" Style="{StaticResource MenuButtonStyle}"/>
+
+
+        </FlexLayout>
+    </ContentPage.Content>
+</local:MainPage>
